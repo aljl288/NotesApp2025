@@ -7,7 +7,7 @@ export default function RootLayout() {
       <Stack.Screen name="tabs" options={{ headerShown: false }} />
 
       {/* Individual Stack Screens (not inside tabs) */}
-      <Stack.Screen name="profile/[id]" options={{ title: "Profile" }} />
+      <Stack.Screen name="SettingScreen" options={{ title: "Setting" }} />
     </Stack>
   );
 }

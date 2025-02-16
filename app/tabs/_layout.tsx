@@ -1,12 +1,37 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { Tabs } from "expo-router";
+import { View } from "react-native";
+import { Ionicons } from "@expo/vector-icons"; // Icons for tabs
 
-export default function _layout() {
+export default function Layout() {
   return (
-    <View>
-      <Text>_layout</Text>
-    </View>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: "blue",
+        tabBarInactiveTintColor: "gray",
+        headerShown: false,
+      }}
+    >
+      {/* Home Tab */}
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "HomeScreen",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" size={size} color={color} />
+          ),
+        }}
+      />
+
+      {/* Summary Tab */}
+      <Tabs.Screen
+        name="summary"
+        options={{
+          title: "SummaryScreen",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="list" size={size} color={color} />
+          ),
+        }}
+      />
+    </Tabs>
   );
 }
-
-const styles = StyleSheet.create({});
