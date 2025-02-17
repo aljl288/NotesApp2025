@@ -1,5 +1,4 @@
 import { Tabs } from "expo-router";
-import { View } from "react-native";
 import { Ionicons } from "@expo/vector-icons"; // Icons for tabs
 
 export default function Layout() {
@@ -13,9 +12,9 @@ export default function Layout() {
     >
       {/* Home Tab */}
       <Tabs.Screen
-        name="index"
+        name="index" //file name without extension
         options={{
-          title: "HomeScreen",
+          title: "Home",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
@@ -24,9 +23,10 @@ export default function Layout() {
 
       {/* Summary Tab */}
       <Tabs.Screen
-        name="summary"
+        name="SummaryScreen"
         options={{
-          title: "SummaryScreen",
+          title: "Summary",
+          tabBarLabel: "Summary",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="list" size={size} color={color} />
           ),
